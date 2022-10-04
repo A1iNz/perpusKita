@@ -16,7 +16,7 @@
     <a id="top" href="#sec1"><i class="position-fixed fa-5x bottom-0 end-0 gld fa-solid fa-circle-up" style="padding:0 2% 2% 0"></i></a>
     <nav class="navbar h-20 navbar-expand-lg shadow" style="background-color: #696969">
       <div class="container-fluid">
-        <a class="h1 fs-1 navbar-brand gld ms-5" data-bs-spy="scroll" data-bs-target="#sec1" href="index.php">Perpustakaan Kami</a>
+        <a class="h1 fs-1 navbar-brand gld ms-5" data-bs-spy="scroll" data-bs-target="#sec1" href="index.php">Perpustakaan Kita</a>
         <i class="fa-thin fa-book-open-cover gld"></i>
         <div class="navbar me-5" id="navbarText">
           <ul class="navbar-nav ml-auto">
@@ -30,9 +30,9 @@
               <a class="nav-link gld fw-semibold nr" href="tutor.php">Tutorial |</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link gld fw-semibold nr me-2" href="saya.php">Akun</a>
+              <a class="nav-link gld fw-semibold nr me-2" href="formlogin.php">log in</a>
             </li>
-            <a class="nav-link gld profile" href="saya.php"><i class="fa-solid fa-user fa-3x"></i></a>
+            <!-- <a class="nav-link gld profile" href="formlogin.php"><i class="fa-solid fa-user fa-3x"></i></a> -->
           </ul>
         </div>
       </div>
