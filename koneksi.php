@@ -5,7 +5,7 @@ $user="root";
 $password="";
 $database="perpuskita";
 
-$koneksi=mysqli_connect($host, $user, $password, $database);
+$koneksi = mysqli_connect($host, $user, $password, $database);
 
 //cek koneksi
 if ($koneksi) {

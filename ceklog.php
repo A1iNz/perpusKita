@@ -2,11 +2,11 @@
 	session_start();
 	include 'koneksi.php';
 
-	$username=$_POST['username'];
-    $password=$_POST['password'];
+	$username = $_POST['username'];
+    $password = $_POST['pass'];
     
-    $data=mysqli_query($koneksi,"select * from users where username='$username' and password='$password'");
-    
+    $data=mysqli_query($koneksi,"select * from users where username='$username' and pass='$password'");
+
     $cek = mysqli_num_rows($data);
 
     if($cek > 0){
@@ -14,8 +14,11 @@
         $_SESSION['status'] = "login";
         header("location:index.php");
     }else{
-        header("location:formlogin.php?pesan=gagal");
+        var_dump($username);
+        
+        var_dump($password);
+        var_dump($_SESSION);
     }
-    
+    session_destroy();
 
 ?>
