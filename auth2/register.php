@@ -45,26 +45,25 @@ session_start();
 						<h1>Register Form</h1>
 					</div>
 					<div class="card-body">
-						<form action="process-register.php" method="POST">
-                        <div class="form-group">
+						<form action="process-register.php" method="post">
+							<div class="form-group">
 								<label for="username">Nama Lengkap</label>
-								<input type="text" name="nama" class="form-control" id="name" aria-describedby="name" placeholder="Nama lengkap" autocomplete="off">
+								<input type="text" name="nama" class="form-control" id="name" value="<?php echo @$_SESSION['nama']?>" aria-describedby="name" placeholder="Nama lengkap" autocomplete="off">
 
 							</div>
-                            <div class="form-group">
+							<div class="form-group">
 								<label for="username">Username</label>
 								<input type="text" name="username" class="form-control" id="username" value="<?php echo @$_SESSION['username']?>" aria-describedby="username" placeholder="username" autocomplete="off">
 
 							</div>
 							<div class="form-group">
 								<label for="password">Password</label>
-								<input type="password" name="pass" class="form-control" id="password" value="<?php echo @$_SESSION['password']?>" placeholder="Password">
+								<input type="password" name="password" class="form-control" id="password" value="<?php echo @$_SESSION['password']?>" placeholder="Password">
 							</div>
 							<div class="form-group">
 								<label for="password">Konfirmasi Password</label>
 								<input type="password" name="password_confirmation" class="form-control" id="password_confirmation" value="<?php echo @$_SESSION['password_confirmation']?>"  placeholder="Password">
 							</div>
-							
 
 							<button type="submit" class="btn btn-primary">Register</button>
 						</form>

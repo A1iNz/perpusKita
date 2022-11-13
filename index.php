@@ -1,7 +1,6 @@
 <?php
-  include 'template/navbar.php';
+    include 'template/navbar.php';
 ?>
-
     <div class="content row">
       <div class="welcome col-sm-6 text-center mt-4">
         <p class="fw-semibold mt-5 fs-1 gld">Meminjam Buku Lebih Mudah</p>
