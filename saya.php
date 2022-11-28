@@ -220,4 +220,3 @@
 		</div>
 	</div>
 </div>
-<a href="auth/logout.php" class="btn btn-danger">p</a>
