@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'template/navbar.php';
 ?>
 <div class="card container col-sm-7">

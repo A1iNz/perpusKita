@@ -1,12 +1,12 @@
 <?php
 	include '../template/navbarauth.php';
+	session_destroy();
 ?>
 
 <body>
 	<link rel="stylesheet" href="../assets/css/haldep.css">
-	<div class="container">
-		<div class="row">
-			<div class="col-6 offset-md-3 mt-5">
+		<div class="card container col-sm-7 mt-5">
+			<div class="card-body ms-3">
 				<?php
 					session_start();
 					if(isset($_SESSION['error'])) {
@@ -26,57 +26,57 @@
 				<?php
 					}
 				?>
-				<div class="card d-flex justify-content-between">
-					<div class="card-title text-center">
-						<h1>Register Form</h1>
-					</div>
-					<div class="card-body">
-						<form action="process-register.php" method="POST">
-							<div class="form-group">
-								<label for="username">Nama Lengkap</label>
-								<input type="text" name="nama" class="form-control" id="name" aria-describedby="name" placeholder="Nama lengkap" autocomplete="off" require>
-							</div>
-							<div class="form-group">
-								<label for="username">Username</label>
-								<input type="text" name="username" class="form-control" id="username" value="<?php echo @$_SESSION['username']?>" aria-describedby="username" placeholder="username" autocomplete="off" require>
-							</div>
-							<div class="form-group">
-								<label for="password">Password</label>
-								<input type="password" name="pass" class="form-control" id="password" value="<?php echo @$_SESSION['password']?>" placeholder="Password" require>
-							</div>
-							<div class="form-group">
-								<label for="password">Konfirmasi Password</label>								
-								<input type="password" name="password_confirmation" class="form-control" id="password_confirmation" value="<?php echo @$_SESSION['password_confirmation']?>"  placeholder="Konfirmasi Password" require>
-							</div>
-							<div class="form-group">
-								<label for="ttl">Tempat tanggal Lahir</label>
-								<input type="text" name="ttl" class="form-control" id="ttl" aria-describedby="ttl" placeholder="Tempat tanggal Lahir" require>
-							</div>
-							<div class="form-group">
-								<label for="gender">Jenis Kelamin</label>	
-								<input type="text" name="gender" class="form-control" id="gender" aria-describedby="Jenis Kelamin" placeholder="Jenis Kelamin" require>
-							</div>
-							<div class="form-group">
-								<label for="kelas">kelas</label>
-								<input type="kelas" name="kelas" class="form-control" id="kelas" placeholder="kelas" require>
-							</div>
-							<div class="form-group">
-								<label for="alamat">alamat</label>
-								<textarea name="alamat" class="form-control" id="alamat" placeholder="alamat" require></textarea>
-							</div>
-							<div class="form-group">
-								<label for="no_telp">no_telp</label>
-								<input type="tel" name="no_telp" class="form-control" id="no_telp" placeholder="no_telp" require>
-							</div>
-							<button type="submit" class="btn btn-primary" require>Register</button>
-						</form>
-					</div>
+				<h1 class="text-center">Register Form</h1>
+				<div class="card-body">
+					<form action="process-register.php" method="POST">
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"></span>
+							<input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="Nama Lengkap" aria-describedby="basic-addon1" id="nama" name="nama" value="<?php echo @$_SESSION['username']?>" require>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"></span>
+							<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" name="username" value="<?php echo @$_SESSION['username']?>" require>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text"></span>
+							<input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" id="pass" name="pass" value="<?php echo @$_SESSION['password']?>" require>
+							<span class="input-group-text"></span>
+							<input type="password" class="form-control" placeholder="Konfirmasi Password" aria-label="Konfirmasi Password" aria-describedby="basic-addon1" id="password_confirmation" name="password_confirmation" value="<?php echo @$_SESSION['password_confirmation']?>" require>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"></span>
+							<input type="text" class="form-control" placeholder="kota, hh/bb/tttt" aria-label="Tempat Tanggal lahir" aria-describedby="basic-addon1" id="ttl" name="ttl" require>
+						</div>
+						<div class="input-group mb-3">
+							<label class="input-group-text" for="gender"></label>
+							<select class="form-select" id="gender" name="gender" placeholder="Jenis Kelamin" aria-label="Jenis Kelamin" require>
+								<option selected><p class="text-secondary">Jenis Kelamin</p</option>
+								<option value="L">Laki Laki</option>
+								<option value="P">Perempuan</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"></span>
+							<input type="tel" class="form-control" placeholder="No telepon" aria-label="No telepon" aria-describedby="basic-addon1" id="no_telp" name="no_telp" require>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text"></span>
+							<textarea class="form-control" aria-label="alamat" placeholder="Alamat" name="alamat" id="alamat" require></textarea>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"></span>
+							<input type="text" class="form-control" placeholder="Kelas" aria-label="Kelas" aria-describedby="basic-addon1" id="kelas" name="kelas" require>
+						</div>
+						<div class="input-group row mt-5">
+							<button type="submit" class="mt-3 col-sm-2 ms-2 btn btn-primary">Register</button>
+							<p class="text-end col mt-3 ms-5" style="">Sudah punya akun?<a href="formlogin.php" style="">Klik di sini!!</a></p>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
-
 <?php
 	session_destroy();
 ?>

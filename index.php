@@ -1,5 +1,7 @@
 <?php
+  session_start();
     include 'template/navbar.php';
+    // $_SESSION['status'] = "";
 ?>
     <div class="content row">
       <div class="welcome col-sm-6 text-center mt-4">
